@@ -8,7 +8,7 @@ async def db_start():
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 "tg_id INTEGER, "
                 "cart_id TEXT)")
-    cur.execute("CREATE TABLE IF NOT EXISTS items("
+    cur.execute("CREATE TABLE IF NOT EXISTS spaitems("
                 "i_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 "name TEXT, "
                 "desc TEXT, "
