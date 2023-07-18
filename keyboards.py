@@ -21,9 +21,20 @@ menuitem2 = InlineKeyboardButton(text='Scrub(1)', callback_data='scrub')
 menuitem3 = InlineKeyboardButton(text='↩️Back', callback_data='back_spa')
 markup3.add(menuitem1, menuitem2, menuitem3)
 
-markup4 = InlineKeyboardMarkup(row_width=2)
+markup4 = InlineKeyboardMarkup(row_width=1)
+menuitem1 = InlineKeyboardButton(text="Face_massage_item", callback_data='face_massage_item')
+menuitem2 = InlineKeyboardButton(text='Stone_massage_item', callback_data='stone_massage_item')
+menuitem3 = InlineKeyboardButton(text='↩️Back', callback_data='back_spa_categories')
+markup4.add(menuitem1, menuitem2, menuitem3)
+
+markup5 = InlineKeyboardMarkup(row_width=1)
+menuitem1 = InlineKeyboardButton(text="scrub_item", callback_data='scrub_item')
+menuitem3 = InlineKeyboardButton(text='↩️Back', callback_data='back_spa_categories')
+markup5.add(menuitem1, menuitem2, menuitem3)
+
+markup6 = InlineKeyboardMarkup(row_width=2)
 menuitem1 = InlineKeyboardButton(text='↩️Back', callback_data='️back_spa_menu')
-markup4.add(menuitem1)
+markup6.add(menuitem1)
 
 
 
