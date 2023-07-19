@@ -3,7 +3,7 @@ from django.contrib import admin
 from .models import Users, Spa_items, Orders
 
 class UsersAdmin(admin.ModelAdmin):
-    list_display = ('id', 'tg_gid', 'tg_name')
+    list_display = ('id', 'tg_id', 'tg_name')
 
 class Spa_itemsAdmin(admin.ModelAdmin):
     list_display = ('id', 'item_name', 'item_desc', 'item_price', 'item_photo')

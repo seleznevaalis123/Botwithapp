@@ -10,7 +10,7 @@ class Users(models.Model):
         db_table = 'users'
         verbose_name = 'User'
         verbose_name_plural = 'Users'
-    tg_gid = models.IntegerField(verbose_name='tg id')
+    tg_id = models.IntegerField(verbose_name='tg id')
     tg_name = models.TextField(verbose_name='name tg')
 
     def __str__(self):
@@ -41,12 +41,12 @@ class Orders(models.Model):
         verbose_name = 'order'
         verbose_name_plural = 'order'
 
-    user_id = models.ForeignKey(Users, on_delete=models.RESTRICT, verbose_name='user_id')
-    spa_item = models.IntegerField(Spa_items, verbose_name='Spa item')
+    user_id = models.ForeignKey(Users, on_delete=models.RESTRICT, verbose_name='item_name')
+    spa_item = models.ForeignKey(Spa_items, verbose_name='Spa item', on_delete=models.RESTRICT)
     created_dt = models.DateTimeField(verbose_name='Created', auto_now_add=True)
-    last_updated_dt = models.TextField(verbose_name='Last_update', blank=True, null=True)
+    last_updated_dt = models.TextField(verbose_name='Last update', blank=True, null=True)
     status = models.TextField(verbose_name='State')
-    start_time = models.TimeField(verbose_name='Start_time')
+    start_time = models.TimeField(verbose_name='Start time')
 
 
 
