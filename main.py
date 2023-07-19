@@ -2,7 +2,6 @@ from aiogram import Bot, Dispatcher, types, executor
 import config
 from keyboards import markup, markup2, markup3, markup4, markup5, markup6
 
-
 bot = Bot(config.bot_token)
 dp = Dispatcher(bot=bot)
 
