@@ -1,14 +1,18 @@
 from aiogram import Bot, Dispatcher, types, executor
+
+import botwithapp_test.orders_app.users
 import config
 from keyboards import markup, markup2, markup3, markup4, markup5, markup6
+from botwithapp_test.orders_app.users import db
+
 
 bot = Bot(config.bot_token)
 dp = Dispatcher(bot=bot)
 
 
-
 @dp.message_handler(commands=['start'])
 async def command_start(msg: types.Message):
+    await botwithapp_test.orders_app.users.cmd_start_db(msg.from_user.id)
     await bot.send_photo(chat_id=msg.chat.id,
                          photo='https://avatars.mds.yandex.net/get-altay/1868686/2a0000016a0afc45ddadefd260492d2a734a/orig',
                          caption='Welcome to the Official TGBot TSPA! Experience the ultimate luxury spa experience at Jaens'
